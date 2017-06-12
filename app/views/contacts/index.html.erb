@@ -2,9 +2,9 @@
 
 <p id="notice"><%= notice %></p>
 
-<h1>Contacts</h1>
+<h1 class="text-center">Contacts</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>User</th>
@@ -34,4 +34,7 @@
 
 <br>
 
-<%= link_to 'New Contact', new_contact_path %>
+<div class="text-center">
+  <%= link_to 'New Contact', new_contact_path, :class => "btn btn-default" %>  
+</div>
+

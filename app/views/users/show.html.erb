@@ -1,25 +1,52 @@
 <% provide(:title, @user.name) %>
+
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @user.name %>
-</p>
+<h1 class="text-center">User Details</h1>
 
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
+<div class="row">
+  <div class="col-sm-6 text-right">
+    <strong>Name:</strong>
+  </div>
+  <div class="col-sm-6 text-left">
+    <%= @user.name %>
+  </div>
+</div>
 
-<p>
-  <strong>Password diggest:</strong>
-  <%= @user.password_diggest %>
-</p>
+<div class="row">
+  <div class="col-sm-6 text-right">
+    <strong>Email:</strong>
+  </div>
+  <div class="col-sm-6 text-left">
+    <%= @user.email %>
+  </div>
+</div>
 
-<p>
-  <strong>Admin:</strong>
-  <%= @user.admin %>
-</p>
+<div class="row">
+  <div class="col-sm-6 text-right">
+    <strong>Password diggest:</strong>
+  </div>
+  <div class="col-sm-6 text-left">
+    <%= @user.password_diggest %>
+  </div>
+</div>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<div class="row">
+  <div class="col-sm-6 text-right">
+    <strong>Admin:</strong>
+  </div>
+  <div class="col-sm-6 text-left">
+    <%= @user.admin %>
+  </div>
+</div>
+
+<br>
+
+<div class="row">
+  <div class="col-sm-6 text-right">
+    <%= link_to 'Back', users_path, :class => "btn btn-default" %>
+  </div>
+  <div class="col-sm-6 text-left">
+    <%= link_to 'Edit', edit_user_path(@user), :class => "btn btn-primary" %>
+  </div>
+</div>

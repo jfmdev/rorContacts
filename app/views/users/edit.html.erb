@@ -1,7 +1,16 @@
 <% provide(:title, "Edit user") %>
-<h1>Editing User</h1>
+
+<h1 class="text-center">Editing User</h1>
 
 <%= render 'form', user: @user %>
 
-<%= link_to 'Show', @user %> |
-<%= link_to 'Back', users_path %>
+<br>
+
+<div class="row">
+  <div class="col-sm-6 text-right">
+    <%= link_to 'Back', users_path, :class => "btn btn-default" %>
+  </div>
+  <div class="col-sm-6 text-left">
+    <%= link_to 'Show', @user, :class => "btn btn-primary" %>
+  </div>
+</div>

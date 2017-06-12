@@ -2,30 +2,60 @@
 
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>User:</strong>
-  <%= @contact.user_id %>
-</p>
+<h1 class="text-center">Contact Details</h1>
 
-<p>
-  <strong>First name:</strong>
-  <%= @contact.first_name %>
-</p>
+<div class="row">
+  <div class="col-sm-6 text-right">
+    <strong>User:</strong>
+  </div>
+  <div class="col-sm-6 text-left">
+    <%= @contact.user_id %>
+  </div>
+</div>
 
-<p>
-  <strong>Last name:</strong>
-  <%= @contact.last_name %>
-</p>
+<div class="row">
+  <div class="col-sm-6 text-right">
+    <strong>First name:</strong>
+  </div>
+  <div class="col-sm-6 text-left">
+    <%= @contact.first_name %>
+  </div>
+</div>
 
-<p>
-  <strong>Email:</strong>
-  <%= @contact.email %>
-</p>
+<div class="row">
+  <div class="col-sm-6 text-right">
+    <strong>Last name:</strong>
+  </div>
+  <div class="col-sm-6 text-left">
+    <%= @contact.last_name %>
+  </div>
+</div>
 
-<p>
-  <strong>Notes:</strong>
-  <%= @contact.notes %>
-</p>
+<div class="row">
+  <div class="col-sm-6 text-right">
+    <strong>Email:</strong>
+  </div>
+  <div class="col-sm-6 text-left">
+    <%= @contact.email %>
+  </div>
+</div>
 
-<%= link_to 'Edit', edit_contact_path(@contact) %> |
-<%= link_to 'Back', contacts_path %>
+<div class="row">
+  <div class="col-sm-6 text-right">
+    <strong>Notes:</strong>
+  </div>
+  <div class="col-sm-6 text-left">
+    <%= @contact.notes %>
+  </div>
+</div>
+
+<br>
+
+<div class="row">
+  <div class="col-sm-6 text-right">
+    <%= link_to 'Back', contacts_path, :class => "btn btn-default" %>
+  </div>
+  <div class="col-sm-6 text-left">
+    <%= link_to 'Edit', edit_contact_path(@contact), :class => "btn btn-primary" %>
+  </div>
+</div>
